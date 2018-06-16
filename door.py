@@ -122,7 +122,7 @@ logger.addHandler(handler)
 
 logger.debug('Setting up wiegand decoder callbacks')
 pi = pigpio.pi()
-w = wiegand.decoder(pi, 24, 25, callback)
+w = wiegand.decoder(pi, W0_PIN, W1_PIN, callback)
 
 logger.debug('Setting GPIO pin modes')
 pi.set_mode(BUZZ_PIN, pigpio.OUTPUT)
